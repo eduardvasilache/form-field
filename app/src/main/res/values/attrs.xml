@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="FormField">
+        <attr name="android:imeOptions" />
+        <attr name="android:inputType" />
+        <attr name="formField_editable" format="boolean" />
+        <attr name="formField_hint" format="string" />
+        <attr name="formField_requiredMessage" format="string" />
+        <attr name="formField_invalidMessage" format="string" />
+        <attr name="formField_textAppearance" format="reference" />
+        <attr name="formField_messageTextAppearance" format="reference" />
+        <attr name="formField_required" format="boolean" />
+        <attr name="formField_trim" format="boolean" />
+        <attr name="formField_minLength" format="integer" />
+        <attr name="formField_validator" format="enum">
+            <enum name="none" value="0" />
+            <enum name="email" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="states">
+        <attr name="state_filled" format="boolean" />
+        <attr name="state_invalid" format="boolean" />
+    </declare-styleable>
+
+</resources>

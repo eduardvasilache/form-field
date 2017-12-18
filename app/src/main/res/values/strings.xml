@@ -1,0 +1,19 @@
+<resources>
+
+    <string name="app_name">Playground</string>
+
+    <string name="field_first_name_hint">First name</string>
+    <string name="field_first_name_required">First name required</string>
+    <string name="field_first_name_invalid">Invalid first name</string>
+
+    <string name="field_last_name_hint">Last name</string>
+    <string name="field_last_name_required">Last name required</string>
+    <string name="field_last_name_invalid">Invalid last name</string>
+
+    <string name="field_birth_date_hint">Birth date</string>
+    <string name="field_birth_date_required">Birth date required</string>
+    <string name="field_birth_date_invalid">Invalid birth date</string>
+
+    <string name="button_ok">OK</string>
+
+</resources>

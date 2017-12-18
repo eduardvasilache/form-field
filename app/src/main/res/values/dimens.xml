@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="form_field_height">56dp</dimen>
+    <dimen name="form_field_round_corner_radius">4dp</dimen>
+    <dimen name="form_field_padding_left_right">16dp</dimen>
+    <dimen name="form_field_padding_top_bottom">4dp</dimen>
+
+</resources>

@@ -1,0 +1,34 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textViewStyle">@style/AppTheme.Widget.TextView</item>
+        <item name="android:editTextStyle">@style/AppTheme.Widget.EditText</item>
+    </style>
+
+    <style name="AppTheme.Widget.TextView" parent="TextAppearance.AppCompat" />
+
+    <style name="AppTheme.Widget.TextView.FormFieldMessage">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#ff0000</item>
+    </style>
+
+    <style name="AppTheme.Widget.EditText" parent="Widget.AppCompat.EditText" />
+
+    <style name="AppTheme.Widget.EditText.FormField">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/form_field_text</item>
+        <item name="android:textColorHint">@color/form_field_hint</item>
+    </style>
+
+    <style name="AppTheme.Widget.FormField" parent="AppTheme">
+        <item name="android:background">@drawable/bg_form_field</item>
+        <item name="android:paddingLeft">@dimen/form_field_padding_left_right</item>
+        <item name="android:paddingTop">@dimen/form_field_padding_top_bottom</item>
+        <item name="android:paddingRight">@dimen/form_field_padding_left_right</item>
+        <item name="android:paddingBottom">@dimen/form_field_padding_top_bottom</item>
+    </style>
+
+</resources>

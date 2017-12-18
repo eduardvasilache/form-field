@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="host"
+            type="io.github.eduardvasilache.formfield.MainActivity" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#283593"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <io.github.eduardvasilache.formfield.view.FormField
+            android:id="@+id/field_first_name"
+            style="@style/AppTheme.Widget.FormField"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/form_field_height"
+            android:imeOptions="actionNext|flagNoFullscreen"
+            android:inputType="textPersonName"
+            app:formField_editable="true"
+            app:formField_hint="@string/field_first_name_hint"
+            app:formField_invalidMessage="@string/field_first_name_invalid"
+            app:formField_messageTextAppearance="@style/AppTheme.Widget.TextView.FormFieldMessage"
+            app:formField_minLength="3"
+            app:formField_required="true"
+            app:formField_requiredMessage="@string/field_first_name_required"
+            app:formField_textAppearance="@style/AppTheme.Widget.EditText.FormField"
+            app:formField_trim="true" />
+
+        <io.github.eduardvasilache.formfield.view.FormField
+            android:id="@+id/field_last_name"
+            style="@style/AppTheme.Widget.FormField"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/form_field_height"
+            android:layout_marginTop="12dp"
+            android:imeOptions="actionDone|flagNoFullscreen"
+            android:inputType="textPersonName"
+            app:formField_editable="true"
+            app:formField_hint="@string/field_last_name_hint"
+            app:formField_invalidMessage="@string/field_last_name_invalid"
+            app:formField_messageTextAppearance="@style/AppTheme.Widget.TextView.FormFieldMessage"
+            app:formField_minLength="3"
+            app:formField_required="true"
+            app:formField_requiredMessage="@string/field_last_name_required"
+            app:formField_textAppearance="@style/AppTheme.Widget.EditText.FormField"
+            app:formField_trim="true" />
+
+        <io.github.eduardvasilache.formfield.view.FormField
+            android:id="@+id/field_birth_date"
+            style="@style/AppTheme.Widget.FormField"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/form_field_height"
+            android:layout_marginTop="12dp"
+            android:onClick="@{host::onBirthDateClicked}"
+            app:formField_editable="false"
+            app:formField_hint="@string/field_birth_date_hint"
+            app:formField_invalidMessage="@string/field_birth_date_invalid"
+            app:formField_messageTextAppearance="@style/AppTheme.Widget.TextView.FormFieldMessage"
+            app:formField_required="true"
+            app:formField_requiredMessage="@string/field_birth_date_required"
+            app:formField_textAppearance="@style/AppTheme.Widget.EditText.FormField" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_ok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:onClick="@{host::onOkClicked}"
+            android:text="@string/button_ok" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="#33a4a4a4"
+            android:padding="12dp"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+</layout>
