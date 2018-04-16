@@ -17,6 +17,7 @@ import java.util.GregorianCalendar;
 import java.util.Locale;
 
 import io.github.eduardvasilache.formfield.databinding.ActivityMainBinding;
+import io.github.eduardvasilache.formfield.util.ImeUtils;
 import io.github.eduardvasilache.formfield.validator.Validator;
 
 public class MainActivity extends AppCompatActivity implements DatePickerDialog.OnDateSetListener,
@@ -75,10 +76,12 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
     }
 
     public void onOkClicked(View view) {
+        ImeUtils.hideKeyboard(this);
         clearStatus();
+
         if (isFormValid()) {
-            appendStatusLine("Checking data...");
-            if (testData(binding.fieldFirstName.getValue(), binding.fieldLastName.getValue())) {
+            appendStatusLine("Checking data with server...");
+            if (isDataValid(binding.fieldFirstName.getValue(), binding.fieldLastName.getValue())) {
                 appendStatusLine("Everything looks good");
             } else {
                 binding.fieldFirstName.showErrorMessage("Server error");
@@ -129,7 +132,7 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
         birthDateDialog.show();
     }
 
-    private boolean testData(String firstName, String lastName) {
+    private boolean isDataValid(String firstName, String lastName) {
         return firstName.toLowerCase().contains("admin");
     }
 

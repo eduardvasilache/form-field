@@ -31,7 +31,7 @@ class FormFieldEditText extends AppCompatEditText {
         return drawableState;
     }
 
-    public void setInvalidStateVisibility(boolean visible) {
+    public void setInvalidStateVisible(boolean visible) {
         invalidStateVisible = visible;
         refreshDrawableState();
     }

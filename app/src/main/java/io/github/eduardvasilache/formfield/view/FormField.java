@@ -356,7 +356,7 @@ public class FormField extends FrameLayout {
     }
 
     private void switchToErrorState(String message) {
-        editText.setInvalidStateVisibility(true);
+        editText.setInvalidStateVisible(true);
         tvMessage.setText(message);
         refreshDrawableState();
         showMessage();
@@ -366,7 +366,7 @@ public class FormField extends FrameLayout {
         requiredMessageVisible = false;
         invalidMessageVisible = false;
         errorMessageVisible = false;
-        editText.setInvalidStateVisibility(false);
+        editText.setInvalidStateVisible(false);
         refreshDrawableState();
         hideMessage();
     }
